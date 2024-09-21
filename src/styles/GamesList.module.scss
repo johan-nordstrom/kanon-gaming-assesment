@@ -1,0 +1,35 @@
+.gamesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gameCard {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: white;
+  border-radius: 8px;
+  max-width: calc(33.333% - 20px);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    color: #000;
+    margin: 0.5rem;
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    color: #000;
+  }
+}

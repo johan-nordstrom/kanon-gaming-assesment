@@ -1,0 +1,27 @@
+// File: src/styles/SearchBar.module.scss
+.searchBar {
+  display: flex;
+  margin-bottom: 1rem;
+  color: #000;
+
+  input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: #000;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken((#fff), 10%);
+    }
+  }
+}
