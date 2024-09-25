@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Playnorth Assesment",
-  description: "Playnorth Assesment",
+  title: "Kanon Gaming Assesment",
+  description: "Kanon Gaming Assesment",
 };
 
 export default function RootLayout({

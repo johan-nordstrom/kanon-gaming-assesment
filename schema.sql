@@ -22,7 +22,8 @@ CREATE TABLE Game (
 -- Create Country table
 CREATE TABLE Country (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL
+    name VARCHAR(100) NOT NULL,
+    allowed BOOLEAN
 );
 
 -- Create Player table
@@ -40,4 +41,13 @@ CREATE TABLE GameCountry (
     PRIMARY KEY (game_id, country_id),
     FOREIGN KEY (game_id) REFERENCES Game(id),
     FOREIGN KEY (country_id) REFERENCES Country(id)
+);
+
+-- Create favorite  junction table for the many-to-many relationship
+CREATE TABLE Favorite (
+    Player_id INT,
+    Game_id INT,
+    PRIMARY KEY (game_id, player id),
+    FOREIGN KEY (game_id) REFERENCES Game(id),
+    FOREIGN KEY player REFERENCES player
 );
