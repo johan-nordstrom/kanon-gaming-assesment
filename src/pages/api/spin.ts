@@ -45,14 +45,7 @@ export default function handler(
     return
   }
 
-/*
   const { coins } = req.query
-
-  if (typeof coins !== 'number' || coins < 1) {
-    res.status(400).json({ error: 'Invalid coin count' })
-    return
-  }
-  */
 
   const result: SpinResult = [
     spinReel(REELS[0]),
@@ -60,12 +53,9 @@ export default function handler(
     spinReel(REELS[2])
   ]
 
-   const { coins } = req.query;
-
   const coinsNumber = Number(coins);
 
   const reward = calculateReward(result)
-  console.log('reward', reward)
   const remainingCoins = coinsNumber - 1 + reward
 
   res.status(200).json({

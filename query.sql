@@ -1,2 +1,2 @@
-SELECT * FROM Game JOIN Player ON favorite_game_id = game_id 
-WHERE type = 'SLOT';
+SELECT * FROM favorites f JOIN games g ON f.game_id = g.game_id 
+WHERE g.type = 'SLOT';
